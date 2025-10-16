@@ -15,10 +15,16 @@
         }
 
         header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             background: #2c7a7b;
             color: white;
             padding: 1rem 2rem;
             text-align: center;
+            z-index: 1000;
+            /* keeps it above other elements */
         }
 
         header h1 {
@@ -27,14 +33,16 @@
         }
 
         nav {
-            position: sticky;
-            top: 0;
+            position: fixed;
+            top: 80px;
+            /* adjust to match header height */
+            left: 0;
+            width: 250px;
+            height: calc(100vh - 80px);
+            /* full height minus header */
             background: #4fd1c5;
             padding: 1rem;
-            width: 250px;
-            height: 100vh;
             overflow-y: auto;
-            float: left;
         }
 
         nav h2 {
@@ -59,6 +67,9 @@
 
         main {
             margin-left: 270px;
+            /* width of sidebar + some spacing */
+            margin-top: 120px;
+            /* height of header + some spacing */
             padding: 2rem;
             max-width: 900px;
         }
@@ -135,6 +146,7 @@
     <nav>
         <h2>Ageless Recycling</h2>
         <p>Call or Text: (669) 241-6266</p>
+        <hr>
         <ul>
             <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="#pickup-details">Pickup Details</a></li>
@@ -146,6 +158,9 @@
             <li><a href="#impact">Environmental Impact</a></li>
             <li><a href="#faq">FAQs</a></li>
             <li><a href="#getting-started">Getting Started</a></li>
+            <hr>
+            <li><a href="https://go2max.github.io/ageless_recycling_calculator/">Recycling
+                    Earnings Calculator</a></li>
         </ul>
     </nav>
 
